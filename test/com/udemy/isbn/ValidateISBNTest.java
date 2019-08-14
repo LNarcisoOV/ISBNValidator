@@ -9,14 +9,16 @@ public class ValidateISBNTest {
 	@Test
 	public void checkIsbnNumber() {
 		ValidateISBN validator = new ValidateISBN();
-		boolean result = validator.checkISBN(140449116);
-		assertTrue(result);
+		boolean result = validator.checkISBN("0140449116");
+		assertTrue("CheckIsbnNumber - first value.", result);
+		result = validator.checkISBN("0140177396");
+		assertTrue("CheckIsbnNumber - second value.", result);
 	}
 	
 	@Test
 	public void checkInvalidIsbnNumber() {
 		ValidateISBN validator = new ValidateISBN();
-		boolean result = validator.checkISBN(140449117);
+		boolean result = validator.checkISBN("0140449117");
 		assertFalse(result);
 	}
 
