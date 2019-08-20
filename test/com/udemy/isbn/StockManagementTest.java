@@ -36,7 +36,7 @@ public class StockManagementTest {
 		String locatorCode = stock.getLocatorCode(isbn);
 
 		verify(databaseService, times(1)).lookup("0140177396");
-		verify(webService, times(0)).lookup(anyString());
+		verify(webService, never()).lookup(anyString());
 	}
 
 	@Test
