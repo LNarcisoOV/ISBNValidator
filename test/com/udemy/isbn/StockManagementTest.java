@@ -9,10 +9,14 @@ public class StockManagementTest {
 
 	@Test
 	public void testCanGetACorrectLocatorCode() {
-		ExternalISBNDataService testWebService = getTestWebService();
-		ExternalISBNDataService testDatabaseService = getTestDatabaseService();
+		ExternalISBNDataService testWebService = mock(ExternalISBNDataService.class);
+		ExternalISBNDataService testDatabaseService = mock(ExternalISBNDataService.class);
 		StockManager stock = new StockManager();
+		
+		when(testWebService.lookup(anyString())).thenReturn(new Book("0140177396", "Of Mice And Men", "J. Steinbeck"));
+		when(testDatabaseService.lookup(anyString())).thenReturn(null);
 
+		
 		stock.setWebService(testWebService);
 		stock.setDatabaseService(testDatabaseService);
 
