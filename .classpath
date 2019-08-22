@@ -22,5 +22,6 @@
 	<classpathentry kind="lib" path="D:/Users/leonardo.vale/Desktop/activation.jar"/>
 	<classpathentry kind="lib" path="D:/Users/leonardo.vale/Desktop/additionnal.jar"/>
 	<classpathentry kind="lib" path="D:/Users/leonardo.vale/Desktop/mail.jar"/>
+	<classpathentry kind="lib" path="D:/Users/leonardo.vale/Desktop/commons-logging-1.1.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
